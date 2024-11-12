@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-2me%54_m481*_e033+eb91j5fi0k10^@^2^1^-uqtcz9_*f84i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wall-mart-api.onrender.com', '127.0.0.1', 'localhost','localhost:5173', 'jumia-clone-api-11vb.onrender.com']
+ALLOWED_HOSTS = ['wall-mart-api-tlrk.onrender.com', '127.0.0.1', 'localhost','localhost:5173', 'jumia-clone-api-11vb.onrender.com']
 
 # Application definition
 
@@ -58,11 +58,11 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 
 
-# Configure CORS
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Add your frontend's origin here
-    # Add any other origins you want to allow
-]
+# # Configure CORS
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:5173",  # Add your frontend's origin here
+#     # Add any other origins you want to allow
+# ]
 
 # Optional: Allow all origins (for development only)
 CORS_ALLOW_ALL_ORIGINS = True
@@ -111,24 +111,28 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'wall_mart_db_sbuo',
+        'USER': 'wall_mart_db_sbuo_user',
+        'PASSWORD': 'FZMz0duhXKvVM82a1z5kD2cj9dPb4pcb',
+        'HOST': 'dpg-cspgtfd2ng1s73d0h1ng-a.oregon-postgres.render.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',  # Enforce SSL connection
+        },
     }
 }
 
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'jumia_clone',
-#         'USER': 'jumia_clone_user',
-#         'PASSWORD': 'PzTNFofaONfdUDxUfDsuXC84cvLMha5n',
-#         'HOST': 'dpg-craktgq3esus73a8afc0-a.oregon-postgres.render.com',
-#         'PORT': '5432',
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
