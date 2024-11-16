@@ -121,14 +121,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'wall_mart_db_fir0',
-        'USER': 'wall_mart_db_fir0_user',
-        'PASSWORD': 'y9Hh4pIix9MwIqk7E9JAyLL2BYI53qwI',
-        'HOST': 'dpg-cr3ietjqf0us73e89pn0-a.oregon-postgres.render.com',
+        'NAME': 'wall_mart_db_sbuo',  # Database name
+        'USER': 'wall_mart_db_sbuo_user',  # Database user
+        'PASSWORD': 'FZMz0duhXKvVM82a1z5kD2cj9dPb4pcb',  # Database password
+        'HOST': 'dpg-cspgtfd2ng1s73d0h1ng-a.oregon-postgres.render.com',  # Hostname
         'PORT': '5432',  # Default PostgreSQL port
-        'OPTIONS': {
-            'sslmode': 'require',  # Ensure secure connection with the database
-        },
     }
 }
 
